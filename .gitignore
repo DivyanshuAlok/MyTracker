@@ -67,3 +67,6 @@ yarn-error.log
 
 # Excluding Manifest.xml
 /android/app/src/main/AndroidManifest.xml
+
+# google services json
+/android/app/google-services.json
