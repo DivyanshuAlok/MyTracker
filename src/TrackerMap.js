@@ -30,7 +30,7 @@ const requestLocationPermission = async () => {
   }
 };
 
-const MapComp = () => {
+const TrackerMap = () => {
   const [loc, setLoc] = useState(null);
   const watchID = useRef(null);
 
@@ -89,7 +89,7 @@ const MapComp = () => {
   );
 };
 
-export default MapComp;
+export default TrackerMap;
 
 const styles = StyleSheet.create({
   map: {

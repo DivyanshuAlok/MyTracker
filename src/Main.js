@@ -4,8 +4,27 @@ import React, {useState} from 'react';
 const Main = () => {
   return (
     <View style={styles.container}>
-      <Pressable style={styles.button}>
+      <Pressable
+        style={({pressed}) => [
+          {
+            backgroundColor: 'coral',
+            borderColor: 'coral',
+            opacity: pressed ? 0.3 : 1,
+          },
+          styles.button,
+        ]}>
         <Text style={styles.text}>RUNNER</Text>
+      </Pressable>
+      <Pressable
+        style={({pressed}) => [
+          {
+            backgroundColor: 'teal',
+            borderColor: 'teal',
+            opacity: pressed ? 0.3 : 1,
+          },
+          styles.button,
+        ]}>
+        <Text style={styles.text}>TRACKER</Text>
       </Pressable>
     </View>
   );
@@ -21,11 +40,11 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   button: {
-    backgroundColor: 'orange',
     alignSelf: 'stretch',
     alignItems: 'center',
     paddingVertical: 15,
     margin: 5,
+    borderWidth: 3,
   },
   text: {
     fontSize: 25,
